@@ -1,12 +1,22 @@
 <?php
 
-
-
 if (isset($_GET['censured']) && $_GET['censured'] != '') {
-    $censured = $_GET['censured'];
+    $censured = trim($_GET['censured']);
 } else {
     $censured = 'Non è stata inserita una parola da censurare';
 };
+
+if (isset($_GET['text']) && $_GET['text'] != '') {
+    $text = trim($_GET['text']);
+} else {
+    $text = 'Non è stata inserito un testo';
+};
+
+$lenText = strlen($text);
+
+$censuredText = str_replace($censured, '***', $text);
+
+$lenCensuredText = strlen($censuredText);
 
 ?>
 
@@ -32,7 +42,22 @@ if (isset($_GET['censured']) && $_GET['censured'] != '') {
 
 
 <body>
-    <?php echo "<h1> $censured </h1>" ?>
+    <div class="main">
+        <div class="container mt-5">
+            <div class="text-container">
+                <h2 class="fs-1">Il testo inserito contiene <?php echo $lenText ?> caratteri</h2>
+
+                <p><?php echo $text ?></p>
+            </div>
+
+            <div class="text-container" class="mt-5">
+                <h2 class="fs-1">Il testo censurato contiene <?php echo $lenCensuredText ?> caratteri</h2>
+
+                <p><?php echo $censuredText ?></p>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 

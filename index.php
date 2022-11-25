@@ -28,12 +28,12 @@
         <div class="container mt-5">
             <form action="censured.php">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Inserire la parola che si vuole censurare</label>
-                    <input type="text" class="form-control" name="censured" id="word-censured" placeholder="example">
+                    <label for="cansured" class="form-label">Inserire la parola che si vuole censurare</label>
+                    <input type="text" class="form-control" name="censured" id="word-censured">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Inserire un testo</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="text" class="form-label">Inserire un testo</label>
+                    <textarea name="text" class="form-control" id="text" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary mb-3">Censura</button>
