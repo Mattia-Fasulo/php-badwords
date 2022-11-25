@@ -1,6 +1,13 @@
 <?php
 
 
+
+if (isset($_GET['censured']) && $_GET['censured'] != '') {
+    $censured = $_GET['censured'];
+} else {
+    $censured = 'Non è stata inserita una parola da censurare';
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +27,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Hello PHP</title>
+    <title>Censured</title>
 </head>
 
+
 <body>
+    <?php echo "<h1> $censured </h1>" ?>
 
 </body>
 

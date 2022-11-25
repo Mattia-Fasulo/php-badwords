@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+body {
+  color: white;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+input[type="text"] {
+  font-size: 2rem;
+}
+
+textarea,
+button {
+  font-size: 2rem !important;
+}
+
+button {
+  background-color: transparent !important;
+  border-color: white !important;
+}
+
+h1 {
+  color: white;
+}

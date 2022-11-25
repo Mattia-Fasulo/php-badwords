@@ -24,7 +24,23 @@
 </head>
 
 <body>
-
+    <div class="main">
+        <div class="container mt-5">
+            <form action="censured.php">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Inserire la parola che si vuole censurare</label>
+                    <input type="text" class="form-control" name="censured" id="word-censured" placeholder="example">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Inserire un testo</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3">Censura</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
